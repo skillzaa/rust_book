@@ -8,4 +8,6 @@
     -   The [https://github.com/skillzaa/rust_book_project](https://github.com/skillzaa/rust_book_project) hosts entire project but not the book part.
 ----    
 -   Following commands are used to compile the project:
-    -   After writing your latest notes, in the root folder , open terminal and type **mdBook build**  
+    -   After writing your latest notes, in the root folder , open terminal and type **mdbook build**.
+    - After that you should save the main project to git using **git add** , **git commit** , **git push**.
+    - Next move to **book** sub folder and upload that folder too to its respective git repository.  
