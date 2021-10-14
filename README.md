@@ -3,11 +3,9 @@
 -   Using mdBook library I have converted my notes into a static website.
 -   This website is hosted on [https://skillzaa.github.io/rust_book/](https://skillzaa.github.io/rust_book/). 
 - The main project is placed in dropbox for safe custody incase the laptop goes out of order.
-- The project is deployed on git hub using two repositories. 
-    -   The [https://github.com/skillzaa/rust_book](https://github.com/skillzaa/rust_book) repository just hosts its book part. The book part is hosted here and not the complete project.
-    -   The [https://github.com/skillzaa/rust_book_project](https://github.com/skillzaa/rust_book_project) hosts entire project but not the book part.
+- The project is deployed on git hub in [https://github.com/skillzaa/rust_book](https://github.com/skillzaa/rust_book) repository.
 ----    
 -   Following commands are used to compile the project:
-    -   After writing your latest notes, in the root folder , open terminal and type **mdbook build**.
+    -   After making your changes in the root folder , open terminal and type **mdbook build**.
     - After that you should save the main project to git using **git add** , **git commit** , **git push**.
-    - Next move to **book** sub folder and upload that folder too to its respective git repository.  
+    - The website part of the project is in the **book** folder on the root. However there is no way to point github to it so I have placed an index.html file on the root that links to the index.html in the **book** folder.

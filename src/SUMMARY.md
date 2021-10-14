@@ -1,8 +1,8 @@
 # Summary
 - [Preamble](./Preamble.md)
-    - [Helpful git commands](./helpful_git_commands.md)
-        - [Printing arrays](./printing_arrays.md)
-            - [Some Tidbits](./some_tidbits.md)
+- [Helpful git commands](./helpful_git_commands.md)
+- [Printing arrays](./printing_arrays.md)
+- [Some Tidbits](./some_tidbits.md)
 - [Vertors in Rust Part1](./vertors_in_rust_part1.md)
 - [Vertors in Rust Part2](./vertors_in_rust_part2.md)
 - [Custom Error Type](./custom_error_type.md)
