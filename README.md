@@ -3,6 +3,9 @@
 -   Using mdBook library I have converted my notes into a static website.
 -   This website is hosted on [https://skillzaa.github.io/rust_book/](https://skillzaa.github.io/rust_book/). 
 - The main project is placed in dropbox for safe custody incase the laptop goes out of order.
-- Keep in mind that the project is deployed on git hub using two repositories. 
-    -   The [https://github.com/skillzaa/rust_book](https://github.com/skillzaa/rust_book) repository just hosts its book part. The book part is hosted on here and not the complete project.
-    -   
+- The project is deployed on git hub using two repositories. 
+    -   The [https://github.com/skillzaa/rust_book](https://github.com/skillzaa/rust_book) repository just hosts its book part. The book part is hosted here and not the complete project.
+    -   The [https://github.com/skillzaa/rust_book_project](https://github.com/skillzaa/rust_book_project) hosts entire project but not the book part.
+----    
+-   Following commands are used to compile the project:
+    -   After writing your latest notes, in the root folder , open terminal and type **mdBook build**  
