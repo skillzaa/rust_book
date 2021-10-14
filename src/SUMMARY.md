@@ -24,6 +24,9 @@
 ---
 ---
 # Rust Advance Topics
----
  -->
+---
 [Helpful git commands](./helpful_git_commands.md) 
+[Possible Future Projects](./possible_future_projects.md) 
+[Development Diary](./development_diary.md) 
+[Basic Topics List](./basic_topics_list.md) 
