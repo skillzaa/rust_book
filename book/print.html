@@ -1,0 +1,716 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Preamble.html"><strong aria-hidden="true">1.</strong> Preamble</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="helpful_git_commands.html"><strong aria-hidden="true">1.1.</strong> Helpful git commands</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="printing_arrays.html"><strong aria-hidden="true">1.1.1.</strong> Printing arrays</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="some_tidbits.html"><strong aria-hidden="true">1.1.1.1.</strong> Some Tidbits</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><a href="vertors_in_rust_part1.html"><strong aria-hidden="true">2.</strong> Vertors in Rust Part1</a></li><li class="chapter-item expanded "><a href="vertors_in_rust_part2.html"><strong aria-hidden="true">3.</strong> Vertors in Rust Part2</a></li><li class="chapter-item expanded "><a href="custom_error_type.html"><strong aria-hidden="true">4.</strong> Custom Error Type</a></li><li class="chapter-item expanded "><a href="duration_between_two_points_of_time.html"><strong aria-hidden="true">5.</strong> Duration Between Points of Time</a></li><li class="chapter-item expanded "><a href="hashmap01.html"><strong aria-hidden="true">6.</strong> Hashmap 01</a></li><li class="chapter-item expanded "><a href="hashmap02.html"><strong aria-hidden="true">7.</strong> Hashmap 02</a></li><li class="chapter-item expanded "><a href="result_consumed.html"><strong aria-hidden="true">8.</strong> Result Consumed</a></li><li class="chapter-item expanded "><a href="simple_function.html"><strong aria-hidden="true">9.</strong> Simple Function</a></li><li class="chapter-item expanded "><a href="some_none_example.html"><strong aria-hidden="true">10.</strong> Some None Example</a></li><li class="chapter-item expanded "><a href="struct_impl_example.html"><strong aria-hidden="true">11.</strong> Struct Impl Example</a></li><li class="chapter-item expanded "><a href="struct_impl02_example.html"><strong aria-hidden="true">12.</strong> Struct Impl Example-02</a></li><li class="chapter-item expanded "><a href="struct_printing.html"><strong aria-hidden="true">13.</strong> Struct Printing</a></li><li class="chapter-item expanded "><a href="struct_to_function.html"><strong aria-hidden="true">14.</strong> Struct to Function</a></li><li class="chapter-item expanded "><a href="system_time.html"><strong aria-hidden="true">15.</strong> System Time</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#preamble" id="preamble">Preamble</a></h1>
+<h1><a class="header" href="#29-july-2021" id="29-july-2021">29 July 2021</a></h1>
+<p>In the Name of Allah Most Merciful.</p>
+<p>I have started this new project to write about Rust Programming language. 
+Hopefully I will continue this project for a very long time.<br />
+These are my notes which I created while learning and coding Rust language. </p>
+<h1><a class="header" href="#rust-useful-code-snippets" id="rust-useful-code-snippets">Rust Useful Code Snippets</a></h1>
+<p>In the following pages I am going to write some useful Rust code snippets that I have used during my programming.</p>
+<p>Every now and then we come acress a problem while programming that takes hours of our time. We spend hours and then either never use this knowledge or forget about it completely.
+The following pages are an attempt to have small code snippets, each one explaining a point such that they can be used for learning as well as later reference. </p>
+<p>Here is a list of many useful github commands which can really prove life savers.</p>
+<h2><a class="header" href="#git-remove-origin" id="git-remove-origin">Git Remove Origin</a></h2>
+<p>When ever we colne a respository we need to remove its connection from its previous remote repository.
+There can be many other reasons to break the connection between some code present on your laptop and its current remote repository.</p>
+<h4><a class="header" href="#to-remove-the-remote-repository" id="to-remove-the-remote-repository">To remove the remote repository</a></h4>
+<pre><code>git remote remove origin
+</code></pre>
+<h4><a class="header" href="#to-add-a-new-remote-repository" id="to-add-a-new-remote-repository">To add a new remote repository</a></h4>
+<pre><code>git remote add origin https://github.com/skillzaa/bilzaa2d.git
+</code></pre>
+<h1><a class="header" href="#pringting-arrays-in-rust" id="pringting-arrays-in-rust">Pringting Arrays in Rust</a></h1>
+<p>Lets look at the simple task of printing an array to terminal:</p>
+<pre><pre class="playground"><code class="language-rust">
+  fn main(){
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    println!(&quot;{}&quot;,a);
+
+}//--main
+
+</code></pre></pre>
+<p>We are getting an error about printing a.</p>
+<pre><code>i32; 5]
+let a: [i32; 5] = [1, 2, 3, 4, 5];
+`[i32; 5]` doesn't implement `std::fmt::Display`
+
+`[i32; 5]` cannot be formatted with the default formatter
+
+help: the trait `std::fmt::Display` is not implemented for `[i32; 5]`
+</code></pre>
+<p>Display is a trait. To be printed out by println macro, the object needs to implement this trait.
+We can still print the array since println also use another trait for printing and that is &quot;Debug&quot; trait. To need to tell the println macro to use the Debug implementation and print the object. For this we just have to chage following:</p>
+<pre><code>    println!(&quot;{:?}&quot;,a);
+</code></pre>
+<h1><a class="header" href="#some-general-points-about-rust-lang" id="some-general-points-about-rust-lang">Some General Points about Rust Lang</a></h1>
+<p>Rust is strongly typed. Strong typing means that functions clearly express the types you’re allowed to pass to them. The program fails to compile if you’re trying to pass a type that’s not compatible. However during run time all the types are removed so there is no run time penalty for having more types in rust.</p>
+<h1><a class="header" href="#vectors-in-rust-part-1" id="vectors-in-rust-part-1">Vectors in Rust part-1</a></h1>
+<p>I have been reading about rust for a while now and the way I can explain vectors in rust is ::</p>
+<blockquote>
+<p>Vectors are just like arrays i.e they are a linear collection of similar objects But Vectors unlike arrays are allocated on heap and can grow or shrink.</p>
+</blockquote>
+<p>So this tell us that in case of a vector as well as array we need to know the data type that has to be stored in it BUT in case of array we also need to know the total number of items where as incase of a vector we dont need that.</p>
+<hr />
+<p>From the Rust Book:: chapter 8 :: Common Collections</p>
+<blockquote>
+<p>Rust’s standard library includes a number of very useful data structures called collections Most other data types represent one specific value, but collections can contain multiple values. Unlike the built-in array and tuple types, the data these collections point to is stored on the heap, which means the amount of data does not need to be known at compile time and can grow or shrink as the program runs. Each kind of collection has different capabilities and costs, and choosing an appropriate one for your current situation is a skill you’ll develop over time.
+also
+vectors are indexed by number, starting at zero.</p>
+</blockquote>
+<h3><a class="header" href="#among-the-most-important-collections-are" id="among-the-most-important-collections-are">Among the most important collections are:</a></h3>
+<ul>
+<li>Vectors</li>
+<li>Strings</li>
+<li>Hash maps </li>
+</ul>
+<h2><a class="header" href="#vectors-in-rust" id="vectors-in-rust">Vectors in Rust</a></h2>
+<blockquote>
+<p>Vectors allow you to store more than one value in a single data structure that puts all the values next to each other in memory. Vectors can only store values of the same type. They are useful when you have a list of items, such as the lines of text in a file or the prices of items in a shopping cart.</p>
+</blockquote>
+<h2><a class="header" href="#creating-a-new-vector" id="creating-a-new-vector">Creating a new Vector</a></h2>
+<pre><code>let v: Vec&lt;i32&gt; = Vec::new();
+or
+let v = vec![1, 2, 3];
+</code></pre>
+<blockquote>
+<p>Vectors are implemented using generics</p>
+</blockquote>
+<h2><a class="header" href="#updating-a-vector" id="updating-a-vector">Updating a Vector</a></h2>
+<pre><code>fn main() {
+  let mut v:Vec&lt;i32&gt; = Vec::new();
+v.push(5);
+v.push(6);
+v.push(7);
+v.push(8);
+println!(&quot;{:?}&quot;,v);
+println!(&quot;vector Capacity :: {:?}&quot;,v.capacity());
+println!(&quot;vector Capacity :: {:?}&quot;,v.len());
+}
+</code></pre>
+<ul>
+<li>Result is capacity = 4 , len = 4</li>
+</ul>
+<blockquote>
+<p>The internal implementation of vector is such that it is just a struct which holds a pointer to heap allocated data. the length and capacity properties are &quot;impl&quot; on to this structure.</p>
+</blockquote>
+<h2><a class="header" href="#reading-data-from-a-vector" id="reading-data-from-a-vector">Reading Data from a Vector</a></h2>
+<p>We can read data from a vector directly using a reference or using a get method. Lets check the get method with out using pattern matching (which is not advisable).</p>
+<pre><code>fn main() {
+let mut v:Vec&lt;u32&gt; = Vec::new();
+
+v.push(1);
+v.push(2);
+v.push(3);
+v.push(4);
+v.push(5);
+
+println!(&quot;1:: {:?}&quot;,v.get(1));
+println!(&quot;2:: {:?}&quot;,v.get(2));
+println!(&quot;3:: {:?}&quot;,v.get(3));
+
+}
+</code></pre>
+<p>The Result is </p>
+<pre><code>1:: Some(2)
+2:: Some(3)
+3:: Some(4)
+</code></pre>
+<h3><a class="header" href="#lets-look-at-correct-way-using-pattern-matching" id="lets-look-at-correct-way-using-pattern-matching">lets look at correct way using pattern matching</a></h3>
+<pre><code>fn main() {
+    let v = vec![1, 2, 3, 4, 5];
+
+    let third: &amp;i32 = &amp;v[2];
+    println!(&quot;The third element is {}&quot;, third);
+
+    match v.get(2) {
+        Some(third) =&gt; println!(&quot;The third element is {}&quot;, third),
+        None =&gt; println!(&quot;There is no third element.&quot;),
+    }
+}
+</code></pre>
+<p>The main point to understand is that while using &amp;i32 we get a reference and while using &quot;get&quot; method we get Option&lt;&amp;T&gt;. Thus making the &quot;get&quot; method very safe.
+Both of these methods behave very differently incase an index is called that does not exist.</p>
+<h2><a class="header" href="#side-trip--lets-look-at-the-above-code-again-from-pattern-matching-point-of-view" id="side-trip--lets-look-at-the-above-code-again-from-pattern-matching-point-of-view">Side Trip :: Lets look at the above code again from pattern matching point of view</a></h2>
+<pre><code>fn main() {
+    let v = vec![1, 2, 3, 4, 5];
+
+    let third: &amp;i32 = &amp;v[2];
+    println!(&quot;The third element is {}&quot;, third);
+
+    match v.get(2) {
+        Some(t) =&gt; println!(&quot;The third element is {}&quot;, t),
+        None =&gt; println!(&quot;There is no third element.&quot;),
+    }
+}
+</code></pre>
+<blockquote>
+<p>when we use get we getback an enum type called &quot;option&quot;. This enum has 2 variants &quot;Some&quot; and &quot;None&quot;. The sum is a method where as None show the presence of nothing.
+Options are commonly paired with pattern matching to query the presence of a value and take action, always accounting for the None case.
+Incase we call an index which does not exist e.g &quot;&amp;v[500]&quot; , this will panic, However while using &quot;get&quot; and &quot;match&quot; it will continue working fine.</p>
+</blockquote>
+<hr />
+<p>In the above code argument name of the Some inside match block does not matter. What ever has been returned will be handed over to what ever name you place in the parenthesis after Some (in this case we have &quot;t&quot;).</p>
+<h2><a class="header" href="#-lets-get-back-to-vectors-in-part-2" id="-lets-get-back-to-vectors-in-part-2">... lets get back to vectors in part-2</a></h2>
+<h1><a class="header" href="#vectors-in-rust-part-2" id="vectors-in-rust-part-2">Vectors in Rust part-2</a></h1>
+<p>Lets look at the following code. This will not compile.</p>
+<pre><code>fn main() {
+   let mut v:Vec&lt;i32&gt; = vec![1,2,3,4,5];
+   //==== Immutable borrow 
+   let first = &amp;v[0];
+   //==== Mutable borrow
+   v.push(6);
+   println!(&quot;first{}&quot;,first);
+}
+</code></pre>
+<blockquote>
+<p>We can not have a mutable borrow and a non mutable borrow in the same scope.Adding a new element onto the end of the vector might require allocating new memory and copying the old elements to the new space, if there isn’t enough room to put all the elements next to each other where the vector currently is. In that case, the reference to the first element would be pointing to deallocated memory. The borrowing rules prevent programs from ending up in that situation.</p>
+</blockquote>
+<hr />
+<h2><a class="header" href="#iterating-over-the-values-in-a-vector" id="iterating-over-the-values-in-a-vector">Iterating over the Values in a Vector</a></h2>
+<p>We can do it like:</p>
+<pre><code> let v = vec![100, 32, 57];
+    for i in &amp;v {
+        println!(&quot;{}&quot;, i);
+    }
+</code></pre>
+<p>OR</p>
+<pre><code> let mut v = vec![100, 32, 57];
+    for i in &amp;mut v {
+        *i += 50;
+  }
+</code></pre>
+<h2><a class="header" href="#using-an-enum-to-store-multiple-types" id="using-an-enum-to-store-multiple-types">Using an Enum to Store Multiple Types</a></h2>
+<pre><code>  enum SpreadsheetCell {
+        Int(i32),
+        Float(f64),
+        Text(String),
+    }
+
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from(&quot;blue&quot;)),
+        SpreadsheetCell::Float(10.12),
+    ];
+</code></pre>
+<h1><a class="header" href="#custom-error-type" id="custom-error-type">Custom Error Type</a></h1>
+<ul>
+<li>This is just an example</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">use std::error::Error;
+use std::fmt;
+
+#[derive(Debug)]
+struct SuperError {
+    side: SuperErrorSideKick,
+}
+
+impl fmt::Display for SuperError {
+    fn fmt(&amp;self, f: &amp;mut fmt::Formatter&lt;'_&gt;) -&gt; fmt::Result {
+        write!(f, &quot;SuperError is here!&quot;)
+    }
+}
+
+impl Error for SuperError {
+    fn source(&amp;self) -&gt; Option&lt;&amp;(dyn Error + 'static)&gt; {
+        Some(&amp;self.side)
+    }
+}
+
+#[derive(Debug)]
+struct SuperErrorSideKick;
+
+impl fmt::Display for SuperErrorSideKick {
+    fn fmt(&amp;self, f: &amp;mut fmt::Formatter&lt;'_&gt;) -&gt; fmt::Result {
+        write!(f, &quot;SuperErrorSideKick is here!&quot;)
+    }
+}
+
+impl Error for SuperErrorSideKick {}
+
+fn get_super_error() -&gt; Result&lt;(), SuperError&gt; {
+    Err(SuperError { side: SuperErrorSideKick })
+}
+
+fn main() {
+    match get_super_error() {
+        Err(e) =&gt; {
+            println!(&quot;Error: {}&quot;, e);
+            println!(&quot;Caused by: {}&quot;, e.source().unwrap());
+        }
+        _ =&gt; println!(&quot;No error&quot;),
+    }
+}
+</code></pre></pre>
+<h1><a class="header" href="#duration-between-two-points-of-time" id="duration-between-two-points-of-time">Duration Between Two Points of Time</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::time::SystemTime;
+fn main() {
+
+    let sys_time = SystemTime::now();
+    // println!(&quot;{:?}&quot;,sys_time.tv_sec);
+    let new_sys_time = SystemTime::now();
+    let difference = new_sys_time.duration_since(sys_time)
+        .expect(&quot;Clock may have gone backwards&quot;);
+    println!(&quot;{:?}&quot;, difference);
+}
+</code></pre></pre>
+<h1><a class="header" href="#hash-map---part-1" id="hash-map---part-1">Hash Map - Part 1</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main(){
+use std::collections::HashMap;
+let mut hm:HashMap &lt;String,u128&gt; = HashMap::new();
+
+hm.insert(&quot;one&quot;.to_string(),1);
+hm.insert(&quot;two&quot;.to_string(),2);
+hm.insert(&quot;three&quot;.to_string(),3);
+hm.insert(&quot;four&quot;.to_string(),4);
+hm.insert(&quot;five&quot;.to_string(),5);
+
+for (key, value) in &amp;hm {
+    println!(&quot;{}: {}&quot;, key, value);
+}
+
+
+
+}
+</code></pre></pre>
+<h1><a class="header" href="#hash-map---part-2" id="hash-map---part-2">Hash Map - Part 2</a></h1>
+<pre><pre class="playground"><code class="language-rust">fn main(){
+    use std::collections::HashMap;
+    #[derive(Hash, Eq, PartialEq, Debug)]
+        struct Viking {
+            name: String,
+            country: String,
+        }
+        
+        impl Viking {
+            /// Creates a new Viking.
+            fn new(name: &amp;str, country: &amp;str) -&gt; Viking {
+                Viking { name: name.to_string(), country: country.to_string() }
+            }
+        }
+        
+        // Use a HashMap to store the vikings' health points.
+        let mut vikings:HashMap&lt;Viking,u32&gt;= HashMap::new();
+        
+        vikings.insert(Viking::new(&quot;Einar&quot;, &quot;Norway&quot;), 25);
+        vikings.insert(Viking::new(&quot;Olaf&quot;, &quot;Denmark&quot;), 24);
+        vikings.insert(Viking::new(&quot;Harald&quot;, &quot;Iceland&quot;), 12);
+        
+        // Use derived implementation to print the status of the vikings.
+        for (viking, health) in &amp;vikings {
+            println!(&quot;{:?} has {} hp&quot;, viking, health);
+        }
+        println!(&quot;--------------------&quot;);
+    
+        for (key, value) in vikings.into_iter() {
+            println!(&quot;{:?} = {}&quot;, key, value);
+            //This line will cause error : safety
+            // vikings.remove(key);
+        }
+    }
+</code></pre></pre>
+<h1><a class="header" href="#result-consumed" id="result-consumed">Result Consumed</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::fs::File;
+fn main() {
+   let f = File::open(&quot;main.jpg&quot;);   // main.jpg doesn't exist
+   match f {
+      Ok(f)=&gt; {
+         println!(&quot;file found {:?}&quot;,f);
+      },
+      Err(e)=&gt; {
+         println!(&quot;file not found \n{:?}&quot;,e);   //handled error
+      }
+   }
+   println!(&quot;end of main&quot;);
+}
+</code></pre></pre>
+<h1><a class="header" href="#simple-function" id="simple-function">Simple Function</a></h1>
+<pre><pre class="playground"><code class="language-rust">
+fn main() {
+let no1:u16 = 33;
+let no2:u16 = 3433;
+let result = add(no1, no2);
+println!(&quot;the result is :: {}&quot;,result);
+}// main ends here
+
+fn add(no1:u16,no2:u16)-&gt;u16{
+    no1 + no2
+}
+</code></pre></pre>
+<h1><a class="header" href="#some-none-example" id="some-none-example">Some None Example</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
+struct Obj {
+no:u128,
+id:u128,
+}
+
+impl Obj{
+   fn new(no:u128,id:u128)-&gt;Obj{
+      Obj {
+         no:no,
+         id:id,
+      }
+   }
+}         
+
+fn main (){
+let mut v:Vec&lt;Obj&gt; = Vec::new();
+v.push(Obj::new(44, 68));
+
+ match v.get(0) {
+                  Some(x)=&gt; println!(&quot;{:?}&quot;,x.no),
+                  _ =&gt; (),
+} 
+
+println!(&quot;{:?}&quot;,v.get(20));
+
+}
+</code></pre></pre>
+<h1><a class="header" href="#struct-impl-example" id="struct-impl-example">Struct Impl Example</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
+
+struct Rectangle {
+    width:u32,
+    height:u32,
+}
+
+impl Rectangle {
+    fn area(&amp;self)-&gt; u32{
+        self.width * self.height
+    }
+}
+
+fn main(){
+
+let rect = Rectangle {
+    width:55,
+    height:80,
+};
+
+println!(&quot;The area is :: {}&quot;, rect.area());
+
+}//--main
+</code></pre></pre>
+<h1><a class="header" href="#struct-impl-example-2" id="struct-impl-example-2">Struct Impl Example-2</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
+struct Rectangle {
+    width:u32,
+    height:u32,
+}
+impl Rectangle {
+    fn area(&amp;self)-&gt; u32{
+        self.width * self.height
+    }
+    fn can_hold(&amp;self,other:&amp;Rectangle)-&gt;bool{
+        self.width &gt; other.width &amp;&amp; self.height &gt; other.height
+    }
+}
+//-------This is the second impl block for associative function (a static function). This does not take &amp;self rather take on other values.
+impl Rectangle {
+    fn square(size:u32)-&gt;Rectangle {
+        Rectangle {
+            width:size,
+            height:size,
+        }
+    }
+}
+fn main(){
+let rect01 = Rectangle {
+    width:55,
+    height:80,
+};
+let rect02 = Rectangle {
+    width:22,
+    height:10,
+};
+let rect03 = Rectangle {
+    width:2,
+    height:8,
+};
+
+println!(&quot;The area is :: {}&quot;, rect01.area());
+println!(&quot;Can rect01 hold rect02 (hint:true)? {}&quot;, rect01.can_hold(&amp;rect02));
+println!(&quot;Can rect01 hold rect03 (hint:true)? {}&quot;, rect01.can_hold(&amp;rect03));
+println!(&quot;Can rect02 hold rect01 (hint:false)? {}&quot;, rect02.can_hold(&amp;rect01));
+println!(&quot;Can rect03 hold rect01 (hint:false)? {}&quot;, rect03.can_hold(&amp;rect01));
+//----------------------------------------------
+//----------------------------------------------
+println!(&quot;The associated/static fn :Rectangle::square(88):: {:?}&quot;, Rectangle::square(88));
+
+}//--main
+</code></pre></pre>
+<h1><a class="header" href="#struct-printing" id="struct-printing">Struct Printing</a></h1>
+<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]    
+struct Point {
+    x:i32,
+    y:i32,
+}
+fn main(){
+
+let pt = Point {
+    x:44, 
+    y:66}; 
+
+println!(&quot;{:?}&quot;,pt);
+}//--main
+</code></pre></pre>
+<h1><a class="header" href="#struct-to-function" id="struct-to-function">Struct To Function</a></h1>
+<pre><pre class="playground"><code class="language-rust">struct Data {
+    name:String,
+    no1:u32,
+    no2:u32,
+}
+
+fn main() {
+let Data  = Data{
+name : String::from(&quot;Mike&quot;),
+no1 : 55,
+no2 : 55,
+};   
+
+
+let result:u32 = add(&amp;Data);
+println!(&quot;The name is  :: {}&quot;,Data.name);
+println!(&quot;the result is :: {}&quot;,result);
+}// main ends here
+
+fn add(Data : &amp;Data)-&gt;u32{
+    Data.no1+ Data.no2
+}
+</code></pre></pre>
+<h1><a class="header" href="#system-time" id="system-time">System Time</a></h1>
+<pre><pre class="playground"><code class="language-rust">use std::time::SystemTime;
+
+fn main() {
+let time_now = SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap();
+println!(&quot;Finally the time stamp::{:?} &quot;,time_now);
+
+}
+</code></pre></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
