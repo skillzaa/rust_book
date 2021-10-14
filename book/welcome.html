@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Struct Impl Example-02</title>
+        <title>Welcome</title>
         
         
 
@@ -95,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="Preamble.html"><strong aria-hidden="true">1.</strong> PreambleXXX</a></li><li class="chapter-item expanded "><a href="helpful_git_commands.html"><strong aria-hidden="true">2.</strong> Helpful git commands</a></li><li class="chapter-item expanded "><a href="printing_arrays.html"><strong aria-hidden="true">3.</strong> Printing arrays</a></li><li class="chapter-item expanded "><a href="some_tidbits.html"><strong aria-hidden="true">4.</strong> Some Tidbits</a></li><li class="chapter-item expanded "><a href="vertors_in_rust_part1.html"><strong aria-hidden="true">5.</strong> Vertors in Rust Part1</a></li><li class="chapter-item expanded "><a href="vertors_in_rust_part2.html"><strong aria-hidden="true">6.</strong> Vertors in Rust Part2</a></li><li class="chapter-item expanded "><a href="custom_error_type.html"><strong aria-hidden="true">7.</strong> Custom Error Type</a></li><li class="chapter-item expanded "><a href="duration_between_two_points_of_time.html"><strong aria-hidden="true">8.</strong> Duration Between Points of Time</a></li><li class="chapter-item expanded "><a href="hashmap01.html"><strong aria-hidden="true">9.</strong> Hashmap 01</a></li><li class="chapter-item expanded "><a href="hashmap02.html"><strong aria-hidden="true">10.</strong> Hashmap 02</a></li><li class="chapter-item expanded "><a href="result_consumed.html"><strong aria-hidden="true">11.</strong> Result Consumed</a></li><li class="chapter-item expanded "><a href="simple_function.html"><strong aria-hidden="true">12.</strong> Simple Function</a></li><li class="chapter-item expanded "><a href="some_none_example.html"><strong aria-hidden="true">13.</strong> Some None Example</a></li><li class="chapter-item expanded "><a href="struct_impl_example.html"><strong aria-hidden="true">14.</strong> Struct Impl Example</a></li><li class="chapter-item expanded "><a href="struct_impl02_example.html" class="active"><strong aria-hidden="true">15.</strong> Struct Impl Example-02</a></li><li class="chapter-item expanded "><a href="struct_printing.html"><strong aria-hidden="true">16.</strong> Struct Printing</a></li><li class="chapter-item expanded "><a href="struct_to_function.html"><strong aria-hidden="true">17.</strong> Struct to Function</a></li><li class="chapter-item expanded "><a href="system_time.html"><strong aria-hidden="true">18.</strong> System Time</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="welcome.html" class="active">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Rust Basics</li><li class="spacer"></li><li class="chapter-item expanded "><a href="simple_function.html"><strong aria-hidden="true">1.</strong> Simple Rust Function</a></li><li class="chapter-item expanded affix "><a href="helpful_git_commands.html">Helpful git commands</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -163,67 +163,30 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#struct-impl-example-2" id="struct-impl-example-2">Struct Impl Example-2</a></h1>
-<pre><pre class="playground"><code class="language-rust">#[derive(Debug)]
-struct Rectangle {
-    width:u32,
-    height:u32,
-}
-impl Rectangle {
-    fn area(&amp;self)-&gt; u32{
-        self.width * self.height
-    }
-    fn can_hold(&amp;self,other:&amp;Rectangle)-&gt;bool{
-        self.width &gt; other.width &amp;&amp; self.height &gt; other.height
-    }
-}
-//-------This is the second impl block for associative function (a static function). This does not take &amp;self rather take on other values.
-impl Rectangle {
-    fn square(size:u32)-&gt;Rectangle {
-        Rectangle {
-            width:size,
-            height:size,
-        }
-    }
-}
-fn main(){
-let rect01 = Rectangle {
-    width:55,
-    height:80,
-};
-let rect02 = Rectangle {
-    width:22,
-    height:10,
-};
-let rect03 = Rectangle {
-    width:2,
-    height:8,
-};
-
-println!(&quot;The area is :: {}&quot;, rect01.area());
-println!(&quot;Can rect01 hold rect02 (hint:true)? {}&quot;, rect01.can_hold(&amp;rect02));
-println!(&quot;Can rect01 hold rect03 (hint:true)? {}&quot;, rect01.can_hold(&amp;rect03));
-println!(&quot;Can rect02 hold rect01 (hint:false)? {}&quot;, rect02.can_hold(&amp;rect01));
-println!(&quot;Can rect03 hold rect01 (hint:false)? {}&quot;, rect03.can_hold(&amp;rect01));
-//----------------------------------------------
-//----------------------------------------------
-println!(&quot;The associated/static fn :Rectangle::square(88):: {:?}&quot;, Rectangle::square(88));
-
-}//--main
-</code></pre></pre>
+                        <h1><a class="header" href="#welcome-to-my-rust-book" id="welcome-to-my-rust-book">Welcome to My Rust Book</a></h1>
+<h6><a class="header" href="#29-july-2021-also-14-oct-2021" id="29-july-2021-also-14-oct-2021">29 July 2021 (also 14-Oct-2021)</a></h6>
+<hr />
+<hr />
+<p>In the Name of Allah Most Merciful.</p>
+<ul>
+<li>I have started this new project to write about Rust Programming language. </li>
+<li>Hopefully I will continue this project for a very long time.</li>
+<li>These are my notes which I created while learning and coding Rust language. It has code snippets , images , explanations, rants and everthing that I wrote while learning rust.</li>
+<li>Consider this as a <strong>quick and dirty -- but -- detailed</strong> sort of a work. I expect there to be many mistakes and errors and hope that you will bring them to my attention.</li>
+<li>God bless you. </li>
+</ul>
+<hr />
+<p>you can contact me on::
+Twitter <a href="https://twitter.com/bilzaa">@bilzaa</a></p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="struct_impl_example.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-                        
 
                         
-                            <a rel="next" href="struct_printing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="simple_function.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -235,13 +198,9 @@ println!(&quot;The associated/static fn :Rectangle::square(88):: {:?}&quot;, Rec
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="struct_impl_example.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-                
 
                 
-                    <a rel="next" href="struct_printing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="simple_function.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

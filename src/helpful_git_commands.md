@@ -1,5 +1,5 @@
 
-Here is a list of many useful github commands which can really prove life savers.
+Here are some useful github commands which can really prove life savers.
 
 ## Git Remove Origin
 When ever we colne a respository we need to remove its connection from its previous remote repository.
