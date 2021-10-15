@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2021-oct-16 Traits in Rust</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Rust Basics</li><li class="spacer"></li><li class="chapter-item expanded "><a href="simple_function.html"><strong aria-hidden="true">1.</strong> Simple Rust Function</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rought Notes</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="2021-oct-15-notes.html">2021-oct-15 Notes</a></li><li class="chapter-item expanded affix "><a href="2021-oct-16-traits.html" class="active">2021-oct-16 Traits in Rust</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#2021-oct-16-traits-in-rust" id="2021-oct-16-traits-in-rust">2021-oct-16 Traits in Rust</a></h1>
+<h3><a class="header" href="#definition" id="definition">Definition</a></h3>
+<blockquote>
+<p>A trait is a collection of methods defined for an unknown type: Self. They can access other methods declared in the same trait.Traits can be implemented for any data type.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>A trait tells the Rust compiler about functionality a particular type has and can share with other types.We can use traits to define shared behavior in an abstract way.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Traits are similar to a feature often called interfaces in other languages, although with some differences.</p>
+</blockquote>
+<hr />
+<ul>
+<li>When an object implements a trait it has to provide implementation for those methods for which default implementation is not provided. For methods which default implementation is provided can be over written or accepted.</li>
+</ul>
+<hr />
+<blockquote>
+<p>A type’s behavior consists of the methods we can call on that type. Different types share the same behavior if we can call the same methods on all of those types. Trait definitions are a way to group method signatures together to define a set of behaviors necessary to accomplish some purpose.</p>
+</blockquote>
+<hr />
+<ul>
+<li>Before using a trait we need to bring the trait into scope first.*Which means that this trait needs to be public in its own defined crate.</li>
+<li>One restriction to note with trait implementations is that we can implement a trait on a type only if either the trait or the type is local to our crate (means declared in that craten).We can’t implement external traits on external types</li>
+</ul>
+<h4><a class="header" href="#what-is-dynamic-dispatch" id="what-is-dynamic-dispatch">What is Dynamic Dispatch</a></h4>
+<p>In computer science, dynamic dispatch is the process of selecting which implementation of a polymorphic operation (method or function) to call at run time. It is commonly employed in, and considered a prime characteristic of, object-oriented programming (OOP) languages and systems.
+<strong>Polymorphism is the phenomenon wherein somewhat interchangeable objects each expose an operation of the same name but possibly differing in behavior</strong>
+OR
+<strong>polymorphism gives us the ability to present a single interface for potentially many different concrete types. This allows us to create more flexible APIs which give more control to the consumer and are easier to maintain.There are several practical advantages to using polymorphism, but one of the biggest is code re-use. If you design an API around specific, concrete types, then you’re committed to that approach, and so are your consumers.</strong></p>
+<ul>
+<li>We should keep the behaviour seperate from data so that it is flexable.</li>
+<li>Polymorphism allows us to create functions that accept any type, as long as those types exhibit certain behaviors or properties that we need them to have.
+<br/>
+<img src="./images/polymorphism.png">
+In this case, that behavior is actually all we care about, so we can leverage polymorphism to be more flexible, but maintain a set of required functionality. Through this, we can do things like write a single function that accepts multiple types.
+<a href="https://oswalt.dev/2021/06/polymorphism-in-rust/">credit</a>
+This is the general idea behind why we would want to use polymorphism in any language, but what options for polymorphism exist in Rust? There are two primary ways, and both of these have trade-offs to consider when it comes to performance as well as binary size:</li>
+</ul>
+<p><strong>Static Dispatch</strong> </p>
+<ul>
+<li>this approach leverages generics (also called parametric polymorphism) and (usually) trait bounds to provide the flexibility we need while still maintaining full type safety, and without requiring a lot of duplicate code. This approach is extremely performant (in Rust this is known as a “zero-cost abstraction”) - however, due to monomorphization, this does create a larger binary size.</li>
+</ul>
+<p><strong>Dynamic Dispatch</strong> </p>
+<ul>
+<li>this approach uses “trait objects” to punt the decision of which type is required to satisfy some kind of polymorphic interface to runtime. This cuts down on binary size (as no monomorphization is used here) but incurs a performance penalty due to the extra lookup at runtime. This approach also explicitly forbids the use of generics.</li>
+<li>Dynamic dispatch can be characterized as the opposite of static dispatch. Where static dispatch choses to create copies of all functions that use generic parameters and store these in the binary, dynamic dispatch choses to store only a single copy, but then calculates the necessary concrete implementation at runtime.</li>
+<li>In Rust, dynamic dispatch leverages “Trait Objects” to achieve polymorphism. Unlike trait bounds, which is an optional constraint you can add to generic parameters, trait objects actually cannot be used with generics at all, and instead are the required method for performing dynamic dispatch in Rust.The syntax for trait objects these days is characterized by the dyn keyword, followed by the name of a Trait</li>
+<li>The dyn keyword was introduced in Rust 1.27 and is now the idiomatic way to explicitly specify that you wish to use dynamic dispatch through trait object.</li>
+<li>Even though we’re not using generic parameters, the compiler still needs a little help to know the size of our types at compile-time. This is why you’ll commonly see trait bounds passed in via reference.</li>
+</ul>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn dynamic_dispatch(t: &amp;dyn Growler) {
+    t.growl();
+}
+<span class="boring">}
+</span></code></pre></pre>
+<hr />
+<h3><a class="header" href="#traits-as-parameters-trait-bounds" id="traits-as-parameters-trait-bounds">Traits as Parameters (trait bounds)</a></h3>
+<p><em>When we want to base our code on behaviour and not data type we specify a trait as an argument to a function</em> (and not a data type). In this way we can give this function any data type as long as that data type implements that trait.
+We normally create a Vector and wrap it in <strong>Box</strong> with <strong>dyn</strong> key word. </p>
+<h3><a class="header" href="#trait-object" id="trait-object">Trait Object</a></h3>
+<p>A trait object points to both an instance of a type implementing our specified trait as well as a table used to look up trait methods on that type at runtime But trait objects differ from traditional objects in that we can’t add data to a trait object. Trait objects aren’t as generally useful as objects in other languages: their specific purpose is to allow abstraction across common behavior.</p>
+<blockquote>
+<p>Trait objects are more like objects in other languages in the sense that they combine data and behavior.
+We create a trait object by specifying some sort of pointer, such as a &amp; reference or a Box<T> smart pointer, then the dyn keyword, and then specifying the relevant trait. Trait objects must use a pointer.</p>
+</blockquote>
+<ul>
+<li>Trait objects can be thought of like objects of an Interface Type in Java, defining common functionality for the Types implementing them. When using a trait object, we don’t care what exact type is used, we just make sure that given functionality is present.</li>
+</ul>
+<hr />
+<blockquote>
+<p>‘Monomorphization’ a fancy term for saying the compiler fills in the concrete types for the generic ones at compile time and duplicates the code if necessary. </p>
+</blockquote>
+<hr />
+<h3><a class="header" href="#conclusion" id="conclusion">Conclusion</a></h3>
+<ul>
+<li>We use trait bounds (Traits as Parameters) with static dispatch along with generics. We get a seperate fn for each type at compile time.</li>
+<li>We use trait objects for dynamic dispatch. In this we use the <strong>dyn</strong> keyword and we do not use generics. A <strong>v table</strong> is used. </li>
+</ul>
+<hr />
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="2021-oct-15-notes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="2021-oct-15-notes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -3,9 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-        
-        <meta name="robots" content="noindex" />
+        <title>2021-oct-15 Notes</title>
         
         
 
@@ -97,7 +95,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Rust Basics</li><li class="spacer"></li><li class="chapter-item expanded "><a href="simple_function.html"><strong aria-hidden="true">1.</strong> Simple Rust Function</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rought Notes</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="2021-oct-15-notes.html">2021-oct-15 Notes</a></li><li class="chapter-item expanded affix "><a href="2021-oct-16-traits.html">2021-oct-16 Traits in Rust</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="welcome.html">Welcome</a></li><li class="chapter-item expanded affix "><li class="part-title">Rust Basics</li><li class="spacer"></li><li class="chapter-item expanded "><a href="simple_function.html"><strong aria-hidden="true">1.</strong> Simple Rust Function</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Rought Notes</li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="2021-oct-15-notes.html" class="active">2021-oct-15 Notes</a></li><li class="chapter-item expanded affix "><a href="2021-oct-16-traits.html">2021-oct-16 Traits in Rust</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -165,37 +163,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#welcome-to-my-rust-book" id="welcome-to-my-rust-book">Welcome to My Rust Book</a></h1>
-<h6><a class="header" href="#29-july-2021-also-14-oct-2021" id="29-july-2021-also-14-oct-2021">29 July 2021 (also 14-Oct-2021)</a></h6>
-<hr />
-<hr />
-<p>In the Name of Allah Most Merciful.</p>
-<ul>
-<li>I have started this new project to write about Rust Programming language. </li>
-<li>Hopefully I will continue this project for a very long time.</li>
-<li>These are my notes which I created while learning and coding Rust language. It has code snippets , images , explanations, rants and everthing that I wrote while learning rust.</li>
-<li>Consider this as a <strong>quick and dirty -- but -- detailed</strong> sort of a work. I expect there to be many mistakes and errors and hope that you will bring them to my attention.</li>
-<li>God bless you. </li>
-</ul>
-<hr />
-<p>you can contact me on::
-Twitter <a href="https://twitter.com/bilzaa">@bilzaa</a></p>
-<h1><a class="header" href="#simple-function" id="simple-function">Simple Function</a></h1>
-<p>Rust is strongly typed. Strong typing means that functions clearly express the types you’re allowed to pass to them. 
-The program fails to compile if you’re trying to pass a type that’s not compatible. However during run time all the types are removed so there is no run time penalty for having more types in rust.</p>
-<pre><pre class="playground"><code class="language-rust">
-fn main() {
-let no1:u16 = 33;
-let no2:u16 = 3433;
-let result = add(no1, no2);
-println!(&quot;the result is :: {}&quot;,result);
-}// main ends here
-
-fn add(no1:u16,no2:u16)-&gt;u16{
-    no1 + no2
-}
-</code></pre></pre>
-<h1><a class="header" href="#2021-oct-15-rought-notes" id="2021-oct-15-rought-notes">2021-oct-15 Rought Notes</a></h1>
+                        <h1><a class="header" href="#2021-oct-15-rought-notes" id="2021-oct-15-rought-notes">2021-oct-15 Rought Notes</a></h1>
 <p>Cargo is Rust’s build system and package manager.</p>
 <pre><pre class="playground"><code class="language-rust">
 <span class="boring">#![allow(unused)]
@@ -396,98 +364,21 @@ fn main() {
 <h3><a class="header" href="#traits-as-parameters-and-the-trait-bound-syntax" id="traits-as-parameters-and-the-trait-bound-syntax">Traits as Parameters, and the Trait Bound Syntax</a></h3>
 <p>At this point, you might be asking - “Why is this useful? I mean, why don’t we just drop the trait bits and just declare this method under a regular old impl Person block?”</p>
 <p>As alluded to at the end of the previous section, the primary reason we focus on defining and then implementing certain behavior, is that we can then build APIs that are behavior-centric, and not just type-centric. Rather than building functions that only accept a certain, predefined type, we can build functions that instead allow any type to be passed in, provided they implement a certain behavior, or set of behaviors. In other words, you can use Traits in the place of concrete types, such as in function parameters.</p>
-<h1><a class="header" href="#2021-oct-16-traits-in-rust" id="2021-oct-16-traits-in-rust">2021-oct-16 Traits in Rust</a></h1>
-<h3><a class="header" href="#definition" id="definition">Definition</a></h3>
-<blockquote>
-<p>A trait is a collection of methods defined for an unknown type: Self. They can access other methods declared in the same trait.Traits can be implemented for any data type.</p>
-</blockquote>
-<hr />
-<blockquote>
-<p>A trait tells the Rust compiler about functionality a particular type has and can share with other types.We can use traits to define shared behavior in an abstract way.</p>
-</blockquote>
-<hr />
-<blockquote>
-<p>Traits are similar to a feature often called interfaces in other languages, although with some differences.</p>
-</blockquote>
-<hr />
-<ul>
-<li>When an object implements a trait it has to provide implementation for those methods for which default implementation is not provided. For methods which default implementation is provided can be over written or accepted.</li>
-</ul>
-<hr />
-<blockquote>
-<p>A type’s behavior consists of the methods we can call on that type. Different types share the same behavior if we can call the same methods on all of those types. Trait definitions are a way to group method signatures together to define a set of behaviors necessary to accomplish some purpose.</p>
-</blockquote>
-<hr />
-<ul>
-<li>Before using a trait we need to bring the trait into scope first.*Which means that this trait needs to be public in its own defined crate.</li>
-<li>One restriction to note with trait implementations is that we can implement a trait on a type only if either the trait or the type is local to our crate (means declared in that craten).We can’t implement external traits on external types</li>
-</ul>
-<h4><a class="header" href="#what-is-dynamic-dispatch" id="what-is-dynamic-dispatch">What is Dynamic Dispatch</a></h4>
-<p>In computer science, dynamic dispatch is the process of selecting which implementation of a polymorphic operation (method or function) to call at run time. It is commonly employed in, and considered a prime characteristic of, object-oriented programming (OOP) languages and systems.
-<strong>Polymorphism is the phenomenon wherein somewhat interchangeable objects each expose an operation of the same name but possibly differing in behavior</strong>
-OR
-<strong>polymorphism gives us the ability to present a single interface for potentially many different concrete types. This allows us to create more flexible APIs which give more control to the consumer and are easier to maintain.There are several practical advantages to using polymorphism, but one of the biggest is code re-use. If you design an API around specific, concrete types, then you’re committed to that approach, and so are your consumers.</strong></p>
-<ul>
-<li>We should keep the behaviour seperate from data so that it is flexable.</li>
-<li>Polymorphism allows us to create functions that accept any type, as long as those types exhibit certain behaviors or properties that we need them to have.
-<br/>
-<img src="./images/polymorphism.png">
-In this case, that behavior is actually all we care about, so we can leverage polymorphism to be more flexible, but maintain a set of required functionality. Through this, we can do things like write a single function that accepts multiple types.
-<a href="https://oswalt.dev/2021/06/polymorphism-in-rust/">credit</a>
-This is the general idea behind why we would want to use polymorphism in any language, but what options for polymorphism exist in Rust? There are two primary ways, and both of these have trade-offs to consider when it comes to performance as well as binary size:</li>
-</ul>
-<p><strong>Static Dispatch</strong> </p>
-<ul>
-<li>this approach leverages generics (also called parametric polymorphism) and (usually) trait bounds to provide the flexibility we need while still maintaining full type safety, and without requiring a lot of duplicate code. This approach is extremely performant (in Rust this is known as a “zero-cost abstraction”) - however, due to monomorphization, this does create a larger binary size.</li>
-</ul>
-<p><strong>Dynamic Dispatch</strong> </p>
-<ul>
-<li>this approach uses “trait objects” to punt the decision of which type is required to satisfy some kind of polymorphic interface to runtime. This cuts down on binary size (as no monomorphization is used here) but incurs a performance penalty due to the extra lookup at runtime. This approach also explicitly forbids the use of generics.</li>
-<li>Dynamic dispatch can be characterized as the opposite of static dispatch. Where static dispatch choses to create copies of all functions that use generic parameters and store these in the binary, dynamic dispatch choses to store only a single copy, but then calculates the necessary concrete implementation at runtime.</li>
-<li>In Rust, dynamic dispatch leverages “Trait Objects” to achieve polymorphism. Unlike trait bounds, which is an optional constraint you can add to generic parameters, trait objects actually cannot be used with generics at all, and instead are the required method for performing dynamic dispatch in Rust.The syntax for trait objects these days is characterized by the dyn keyword, followed by the name of a Trait</li>
-<li>The dyn keyword was introduced in Rust 1.27 and is now the idiomatic way to explicitly specify that you wish to use dynamic dispatch through trait object.</li>
-<li>Even though we’re not using generic parameters, the compiler still needs a little help to know the size of our types at compile-time. This is why you’ll commonly see trait bounds passed in via reference.</li>
-</ul>
-<pre><pre class="playground"><code class="language-rust">
-<span class="boring">#![allow(unused)]
-</span><span class="boring">fn main() {
-</span>fn dynamic_dispatch(t: &amp;dyn Growler) {
-    t.growl();
-}
-<span class="boring">}
-</span></code></pre></pre>
-<hr />
-<h3><a class="header" href="#traits-as-parameters-trait-bounds" id="traits-as-parameters-trait-bounds">Traits as Parameters (trait bounds)</a></h3>
-<p><em>When we want to base our code on behaviour and not data type we specify a trait as an argument to a function</em> (and not a data type). In this way we can give this function any data type as long as that data type implements that trait.
-We normally create a Vector and wrap it in <strong>Box</strong> with <strong>dyn</strong> key word. </p>
-<h3><a class="header" href="#trait-object" id="trait-object">Trait Object</a></h3>
-<p>A trait object points to both an instance of a type implementing our specified trait as well as a table used to look up trait methods on that type at runtime But trait objects differ from traditional objects in that we can’t add data to a trait object. Trait objects aren’t as generally useful as objects in other languages: their specific purpose is to allow abstraction across common behavior.</p>
-<blockquote>
-<p>Trait objects are more like objects in other languages in the sense that they combine data and behavior.
-We create a trait object by specifying some sort of pointer, such as a &amp; reference or a Box<T> smart pointer, then the dyn keyword, and then specifying the relevant trait. Trait objects must use a pointer.</p>
-</blockquote>
-<ul>
-<li>Trait objects can be thought of like objects of an Interface Type in Java, defining common functionality for the Types implementing them. When using a trait object, we don’t care what exact type is used, we just make sure that given functionality is present.</li>
-</ul>
-<hr />
-<blockquote>
-<p>‘Monomorphization’ a fancy term for saying the compiler fills in the concrete types for the generic ones at compile time and duplicates the code if necessary. </p>
-</blockquote>
-<hr />
-<h3><a class="header" href="#conclusion" id="conclusion">Conclusion</a></h3>
-<ul>
-<li>We use trait bounds (Traits as Parameters) with static dispatch along with generics. We get a seperate fn for each type at compile time.</li>
-<li>We use trait objects for dynamic dispatch. In this we use the <strong>dyn</strong> keyword and we do not use generics. A <strong>v table</strong> is used. </li>
-</ul>
-<hr />
-<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="simple_function.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
+                        
+                            <a rel="next" href="2021-oct-16-traits.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -497,7 +388,15 @@ We create a trait object by specifying some sort of pointer, such as a &amp; ref
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="simple_function.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
+                
+                    <a rel="next" href="2021-oct-16-traits.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 
@@ -530,14 +429,6 @@ We create a trait object by specifying some sort of pointer, such as a &amp; ref
         <!-- Custom JS scripts -->
         
 
-        
-        
-        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
-        
         
 
     </body>

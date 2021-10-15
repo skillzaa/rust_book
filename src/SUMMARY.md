@@ -29,4 +29,8 @@
 [Helpful git commands](./helpful_git_commands.md) 
 [Possible Future Projects](./possible_future_projects.md) 
 [Development Diary](./development_diary.md) 
-[Basic Topics List](./basic_topics_list.md) 
+---
+# Rought Notes
+---
+[2021-oct-15 Notes](./2021-oct-15-notes.md) 
+[2021-oct-16 Traits in Rust](./2021-oct-16-traits.md) 
