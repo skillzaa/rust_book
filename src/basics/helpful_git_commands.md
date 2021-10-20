@@ -11,5 +11,5 @@ git remote remove origin
 ```
 #### To add a new remote repository 
 ```
-git remote add origin https://github.com/skillzaa/bilzaa2d.git
+git remote add origin https://github.com/skillzaa/XXX.git
 ```
