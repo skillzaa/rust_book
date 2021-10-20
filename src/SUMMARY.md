@@ -1,5 +1,6 @@
 # Summary
  [Welcome](./welcome.md)
+ [FAQs](./faqs/questions.md)
 
 # Rust Basics
 ---
@@ -16,8 +17,8 @@
 - [Struct Impl Example](./basics/struct_impl_example.md)
 - [Struct Impl Example-02](./basics/struct_impl02_example.md)
 - [Struct Printing](./basics/struct_printing.md)
-- [Struct to Function](./basics/struct_to_function.md)
-- [System Time](./basics/system_time.md)
+- [Sending Struct to a Function](./basics/struct_to_function.md)
+- [System Time / Time Stamp](./basics/system_time.md)
 - [Helpful git commands](./basics/helpful_git_commands.md) 
 
 
@@ -26,6 +27,8 @@
 [2021-oct-15 Notes](./rough_notes/2021-oct-15-notes.md) 
 [2021-oct-16 Traits in Rust](./rough_notes/2021-oct-16-traits.md) 
 [2021-oct-18 Notes](./rough_notes/2021-oct-18-notes.md) 
+ [FAQs](./faqs/questions.md)
+ [Errors not to make](./misc/errors_not_to_make.md)
 
 
 

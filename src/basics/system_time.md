@@ -1,4 +1,4 @@
-# System Time
+# System Time / Time Stamp
 ```rust
 use std::time::SystemTime;
 

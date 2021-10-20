@@ -1,7 +1,7 @@
 
 # Vectors in Rust part-2
 Lets look at the following code. This will not compile.
-```
+```rust
 fn main() {
    let mut v:Vec<i32> = vec![1,2,3,4,5];
    //==== Immutable borrow 
@@ -15,21 +15,21 @@ fn main() {
 ---
 ## Iterating over the Values in a Vector
 We can do it like:
-```
+```rust
  let v = vec![100, 32, 57];
     for i in &v {
         println!("{}", i);
     }
 ```
 OR
-```
+```rust
  let mut v = vec![100, 32, 57];
     for i in &mut v {
         *i += 50;
   }
 ```        
 ## Using an Enum to Store Multiple Types
-```
+```rust
   enum SpreadsheetCell {
         Int(i32),
         Float(f64),

@@ -1,4 +1,5 @@
-# Struct To Function
+# Sending Struct to a Function
+** #edit I think variable names have not been capitalized correctly**
 ```rust
 struct Data {
     name:String,
@@ -9,8 +10,8 @@ struct Data {
 fn main() {
 let Data  = Data{
 name : String::from("Mike"),
-no1 : 55,
-no2 : 55,
+no1 : 36,
+no2 : 92,
 };   
 
 

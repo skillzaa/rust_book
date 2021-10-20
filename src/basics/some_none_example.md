@@ -19,9 +19,15 @@ fn main (){
 let mut v:Vec<Obj> = Vec::new();
 v.push(Obj::new(44, 68));
 
- match v.get(0) {
-                  Some(x)=> println!("{:?}",x.no),
-                  _ => (),
+//-- lets get some here
+match v.get(0) {
+                  Some(x)=> println!("{:?}--Result is success i.e Some",x.no),
+                  None => println!("--Result is failure i.e None")
+}
+
+match v.get(20) {
+                  Some(x)=> println!("{:?}--Result is success i.e Some",x.no),
+                  None => println!("--Result is failure i.e None")
 } 
 
 println!("{:?}",v.get(20));

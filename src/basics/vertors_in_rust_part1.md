@@ -18,7 +18,7 @@ also
 ## Vectors in Rust
 >  Vectors allow you to store more than one value in a single data structure that puts all the values next to each other in memory. Vectors can only store values of the same type. They are useful when you have a list of items, such as the lines of text in a file or the prices of items in a shopping cart.
 ## Creating a new Vector
-```
+```rust
 let v: Vec<i32> = Vec::new();
 or
 let v = vec![1, 2, 3];
@@ -26,7 +26,7 @@ let v = vec![1, 2, 3];
 > Vectors are implemented using generics
 
 ## Updating a Vector
-```
+```rust
 fn main() {
   let mut v:Vec<i32> = Vec::new();
 v.push(5);
@@ -42,7 +42,7 @@ println!("vector Capacity :: {:?}",v.len());
 > The internal implementation of vector is such that it is just a struct which holds a pointer to heap allocated data. the length and capacity properties are "impl" on to this structure.
  ## Reading Data from a Vector
  We can read data from a vector directly using a reference or using a get method. Lets check the get method with out using pattern matching (which is not advisable).
-```
+```rust
 fn main() {
 let mut v:Vec<u32> = Vec::new();
 
@@ -66,7 +66,7 @@ println!("3:: {:?}",v.get(3));
 3:: Some(4)
 ```
 ### lets look at correct way using pattern matching
-```
+```rust
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
@@ -83,7 +83,7 @@ The main point to understand is that while using &i32 we get a reference and whi
 Both of these methods behave very differently incase an index is called that does not exist.
 
 ## Side Trip :: Lets look at the above code again from pattern matching point of view
-```
+```rust
 fn main() {
     let v = vec![1, 2, 3, 4, 5];
 
