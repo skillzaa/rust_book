@@ -18,17 +18,19 @@
 - [Struct Impl Example-02](./basics/struct_impl02_example.md)
 - [Struct Printing](./basics/struct_printing.md)
 - [Sending Struct to a Function](./basics/struct_to_function.md)
-- [System Time / Time Stamp](./basics/system_time.md)
+- [System Time / Time Stamp](./basics/system_time.md)  
+- [Thread Sleep](./basics/thread_sleep.md) 
 - [Helpful git commands](./basics/helpful_git_commands.md) 
 
 
 # Rought Notes
 ---
+[State of Multimedia Programming](./misc/2021_oct_21_graphics.md) 
 [2021-oct-15 Notes](./rough_notes/2021-oct-15-notes.md) 
 [2021-oct-16 Traits in Rust](./rough_notes/2021-oct-16-traits.md) 
 [2021-oct-18 Notes](./rough_notes/2021-oct-18-notes.md) 
  [FAQs](./faqs/questions.md)
- [Errors not to make](./misc/errors_not_to_make.md)
+ [One line life savers](./misc/one_line_life_savers.md)
 
 
 
