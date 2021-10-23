@@ -8,6 +8,7 @@
 - [Printing arrays](./basics/printing_arrays.md) 
 - [Vertors in Rust Part1](./basics/vertors_in_rust_part1.md)
 - [Vertors in Rust Part2](./basics/vertors_in_rust_part2.md)
+- [Vertors in Rust Part3](./basics/vertors_in_rust_part3.md)
 - [Custom Error Type](./basics/custom_error_type.md)
 - [Duration Between Points of Time](./basics/duration_between_two_points_of_time.md)
 - [Hashmap 01](./basics/hashmap01.md)
@@ -16,11 +17,17 @@
 - [Some None Example](./basics/some_none_example.md)
 - [Struct Impl Example](./basics/struct_impl_example.md)
 - [Struct Impl Example-02](./basics/struct_impl02_example.md)
+- [Struct Impl Example-02](./basics/struct_impl02_example.md)
 - [Struct Printing](./basics/struct_printing.md)
 - [Sending Struct to a Function](./basics/struct_to_function.md)
 - [System Time / Time Stamp](./basics/system_time.md)  
 - [Thread Sleep](./basics/thread_sleep.md) 
+- [Documentation](./basics/documentation.md) 
 - [Helpful git commands](./basics/helpful_git_commands.md) 
+- [Creating File](./basics/creating_file.md) 
+- [Reading File](./basics/reading_file.md) 
+- [Serde json](./basics/serde_ser_deser.md) 
+- [Quick n Dirty Regex](./basics/regex.md) 
 
 
 # Rought Notes

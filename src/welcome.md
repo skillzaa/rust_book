@@ -13,4 +13,4 @@ In the Name of Allah Most Merciful.
 -   God bless you. 
 ---
 you can contact me on::
-Twitter [@bilzaa](https://twitter.com/bilzaa)
+Twitter [@rustntell](https://twitter.com/rustntell)
