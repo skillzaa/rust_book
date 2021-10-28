@@ -16,7 +16,6 @@
 - [Some None Example](./basics/some_none_example.md)
 - [Struct Impl Example](./basics/struct_impl_example.md)
 - [Struct Impl Example-02](./basics/struct_impl02_example.md)
-- [Struct Impl Example-02](./basics/struct_impl02_example.md)
 - [Struct Printing](./basics/struct_printing.md)
 - [Sending Struct to a Function](./basics/struct_to_function.md)
 - [System Time / Time Stamp](./basics/system_time.md)  
