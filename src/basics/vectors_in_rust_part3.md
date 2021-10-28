@@ -51,8 +51,8 @@ let even_numbers = numbers
 println!("{:?}", even_numbers);
 ```
 ### Future Projects
-6. check if a vec has some items of another vector (overlap).
-3. check if a vec has some items of another vector (superset).
-4. check if a vec is subset of another vec (subset).
-4. sort a vec.
-4. comparing two vectors.
+1. check if a vec has some items of another vector (overlap).
+1. check if a vec has some items of another vector (superset).
+1. check if a vec is subset of another vec (subset).
+1. sort a vec.
+1. comparing two vectors.

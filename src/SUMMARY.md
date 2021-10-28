@@ -4,11 +4,10 @@
 
 # Rust Basics
 ---
-- [Basics Index](./basics/index.md)
 - [Printing arrays](./basics/printing_arrays.md) 
-- [Vertors in Rust Part1](./basics/vertors_in_rust_part1.md)
-- [Vertors in Rust Part2](./basics/vertors_in_rust_part2.md)
-- [Vertors in Rust Part3](./basics/vertors_in_rust_part3.md)
+- [Vertors in Rust Part1](./basics/vectors_in_rust_part1.md)
+- [Vertors in Rust Part2](./basics/vectors_in_rust_part2.md)
+- [Vertors in Rust Part3](./basics/vectors_in_rust_part3.md)
 - [Custom Error Type](./basics/custom_error_type.md)
 - [Duration Between Points of Time](./basics/duration_between_two_points_of_time.md)
 - [Hashmap 01](./basics/hashmap01.md)
@@ -27,7 +26,8 @@
 - [Creating File](./basics/creating_file.md) 
 - [Reading File](./basics/reading_file.md) 
 - [Serde json](./basics/serde_ser_deser.md) 
-- [Quick n Dirty Regex](./basics/regex.md) 
+- [Ownership](./basics/ownership.md) 
+- [One line life savers](./basics/one_line_life_savers.md)
 
 
 # Rought Notes
@@ -36,8 +36,8 @@
 [2021-oct-15 Notes](./rough_notes/2021-oct-15-notes.md) 
 [2021-oct-16 Traits in Rust](./rough_notes/2021-oct-16-traits.md) 
 [2021-oct-18 Notes](./rough_notes/2021-oct-18-notes.md) 
+[2021-oct-25 Wiz](./rough_notes/2021-oct-25-wiz.md) 
  [FAQs](./faqs/questions.md)
- [One line life savers](./misc/one_line_life_savers.md)
 
 
 
