@@ -5,9 +5,9 @@
 # Rust Basics
 ---
 - [Printing arrays](./basics/printing_arrays.md) 
-- [Vertors in Rust Part1](./basics/vectors_in_rust_part1.md)
-- [Vertors in Rust Part2](./basics/vectors_in_rust_part2.md)
-- [Vertors in Rust Part3](./basics/vectors_in_rust_part3.md)
+- [Vectors in Rust Part1](./basics/vectors_in_rust_part1.md)
+- [Vectors in Rust Part2](./basics/vectors_in_rust_part2.md)
+- [Vectors in Rust Part3](./basics/vectors_in_rust_part3.md)
 - [Custom Error Type](./basics/custom_error_type.md)
 - [Duration Between Points of Time](./basics/duration_between_two_points_of_time.md)
 - [Hashmap 01](./basics/hashmap01.md)
