@@ -24,9 +24,15 @@
 - [Helpful git commands](./basics/helpful_git_commands.md) 
 - [Creating File](./basics/creating_file.md) 
 - [Reading File](./basics/reading_file.md) 
-- [Serde json](./basics/serde_ser_deser.md) 
+- [Serde json](./basics/serde02.md) 
 - [Ownership](./basics/ownership.md) 
+- [Slices](./basics/slices.md) 
+- [Learning 2021-Oct-28 ](./basics/learnings.md) 
 - [One line life savers](./basics/one_line_life_savers.md)
+- [Reading a Directory](./basics/reading_dir.md)
+- [If let](./basics/if_let.md)
+- [Collections](./basics/collections.md)
+- [Difference between iter(), into_iter(), and iter_mut()](./basics/iter_into_iter_iter_mut.md)
 
 
 # Rought Notes
@@ -35,6 +41,7 @@
 [2021-oct-15 Notes](./rough_notes/2021-oct-15-notes.md) 
 [2021-oct-16 Traits in Rust](./rough_notes/2021-oct-16-traits.md) 
 [2021-oct-18 Notes](./rough_notes/2021-oct-18-notes.md) 
+[2021-oct-30 Notes](./rough_notes/2021-oct-30.md) 
 [2021-oct-25 Wiz](./rough_notes/2021-oct-25-wiz.md) 
  [FAQs](./faqs/questions.md)
 
