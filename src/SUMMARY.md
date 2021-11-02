@@ -43,6 +43,7 @@
 [2021-oct-18 Notes](./rough_notes/2021-oct-18-notes.md) 
 [2021-oct-30 Notes](./rough_notes/2021-oct-30.md) 
 [2021-oct-25 Wiz](./rough_notes/2021-oct-25-wiz.md) 
+[2021-nov-01 Hulk](./rough_notes/2021-oct-25-hulk.md) 
  [FAQs](./faqs/questions.md)
 
 
